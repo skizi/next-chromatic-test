@@ -7,6 +7,14 @@ export const PostEvents: React.FC = () => {
   const addressRef = useRef<HTMLInputElement>(null);
   const getAddress = useCallback(() => {
     if (zipcodeRef.current.value === '') return;
+    // axios
+    //   .get(`${process.env.REACT_MSW_DOMAIN}/todos`)
+    //   .then((response) => {
+    //     console.log(response);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
     axios
       .get('https://api.zipaddress.net/', {
         params: { zipcode: zipcodeRef.current.value },

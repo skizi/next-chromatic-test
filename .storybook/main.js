@@ -1,4 +1,5 @@
 module.exports = {
+  typescript: { reactDocgen: false },
   stories: [
     '../components/**/*.stories.mdx',
     '../components/**/*.stories.@(js|jsx|ts|tsx)',
